@@ -1,0 +1,15 @@
+{
+    "name": "RokuMonitor",
+    "description": "Roku Monitor.",
+    "authors": [
+        {
+            "name": "twelfd",
+            "email": "john.nevin1@gmail.com"
+        }
+    ],
+    "require": {
+        "curl/curl": "dev-master",
+        "twbs/bootstrap":"4.0.0"
+    }
+}
+ 
