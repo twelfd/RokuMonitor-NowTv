@@ -6,6 +6,11 @@
     $user = new USER();
     if(!$user->is_loggedin()){
         $user->redirect('index.php');
+        exit();
+    }
+    if (isset($_GET['logout'])){
+        session_destroy();
+        $user->redirect('index.php');
     }
 ?>
 <!DOCTYPE html>
@@ -25,6 +30,8 @@ and open the template in the editor.
         <a href="atlantic/atlantic.php?action=fullreset">Full Reset</a>
         <h2>SS Football</h2>
         <a href="ss1/ss1.php?action=reset">Reset</a>
-        <a href="ss1/ss1.php?action=fullreset">Full Reset</a>
+        <a href="main.php?logout=yes">Full Reset</a>
+        
+        
     </body>
 </html>
