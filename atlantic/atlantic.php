@@ -3,7 +3,8 @@
 $ip = "http://192.168.2.123:8060";
 
 use Curl\Curl;
-require '/var/www/html/vendor/autoload.php';
+require '../vendor/autoload.php';
+require '../assets/login.class.php';
     if (!isset($_GET['action'])){
         $curl = new Curl;
         $curl->get("$ip/query/active-app");
@@ -28,7 +29,7 @@ require '/var/www/html/vendor/autoload.php';
                         sleep(1);
                         $x++;
                     }
-                    $x = 1;
+                    $x = 1; 
                     while ($x < 4) {
                         $curl->post("$ip/keypress/Down");
                         sleep(1);
@@ -52,6 +53,7 @@ require '/var/www/html/vendor/autoload.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
+                    $user = new USER();
                     $user->redirect("../index.php");
                     exit();
         }

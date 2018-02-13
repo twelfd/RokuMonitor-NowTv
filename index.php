@@ -1,5 +1,6 @@
 <?php
 require 'assets/login.class.php';
+$user = new USER();
 if (isset($_SESSION['user_session'])){
     $user->redirect('main.php');
 }
@@ -7,7 +8,7 @@ if (isset($_POST["username"])) {
     
     $uname = $_POST["username"];
     $upass = $_POST["pass"];
-    $user = new USER();
+    //$user = new USER();
     if ($user->login($uname, $upass)) {
         $user->redirect('main.php');
     }
