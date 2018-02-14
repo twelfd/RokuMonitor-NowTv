@@ -10,7 +10,7 @@ class USER
         if(!empty($row)){
             if(password_verify($upass, $row['password'])){
                 session_start();
-                $_SESSION['user_session'] = $row['userID'];
+                $_SESSION['user_session'] = $row['username'];
                 return true;
             }
             

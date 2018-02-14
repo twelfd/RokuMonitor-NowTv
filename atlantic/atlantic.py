@@ -4,7 +4,7 @@
 URL = "php /var/www/html/atlantic/atlantic.php"
 
 # Set the interface you wish to monitor, eg: eth0, wlan0, usb0
-INTERFACE = "eth0"
+INTERFACE = "enp3s0"
 
 # Set the minimum download speed in KB/s that must be achieved.
 MINIMUM_SPEED = 150

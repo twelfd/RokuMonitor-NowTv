@@ -1,10 +1,10 @@
 <?php 
 # Set the ip of the Roku box here
-$ip = "http://192.168.2.123:8060";
+$ip = "http://192.168.2.133:8060";
 
 use Curl\Curl;
-require '../vendor/autoload.php';
-require '../assets/login.class.php';
+require '/var/www/html/vendor/autoload.php';
+require '/var/www/html/assets/login.class.php';
     if (!isset($_GET['action'])){
         $curl = new Curl;
         $curl->get("$ip/query/active-app");
@@ -61,16 +61,14 @@ require '../assets/login.class.php';
     if(!isset($_SESSION)) { 
         session_start(); 
     }  
-    require '/var/www/html/assets/login.class.php';
+    //require '/var/www/html/assets/login.class.php';
     $user = new USER();
     if(!$user->is_loggedin()){
         $user->redirect('../index.php');
         exit();
     }
     
-?>
 
-        <?php
         $curl = new Curl;
         $curl->get("$ip/query/active-app");
         $results = get_object_vars($curl);
@@ -99,7 +97,7 @@ require '../assets/login.class.php';
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
                     $curl->post("$ip/keypress/Select");
-                    $user->redirect("/var/www/html/index.php");
+                    $user->redirect("../main.php");
                     exit();
                 }
                 else {
@@ -135,7 +133,7 @@ require '../assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
-                    $user->redirect("../index.php");
+                    $user->redirect("../main.php");
                     exit();
                 }
             }
@@ -174,7 +172,7 @@ require '../assets/login.class.php';
                 sleep(5);
                 $curl->post("$ip/keypress/Select");
                 sleep(1);
-                $user->redirect("../index.php");
+                $user->redirect("../main.php");
                 exit();
             }
         }
