@@ -1,6 +1,6 @@
 <?php 
 # Set the ip of the Roku box here
-$ip = "http://192.168.2.133:8060";
+$ip = "http://192.168.2.126:8060";
 
 use Curl\Curl;
 require '/var/www/html/vendor/autoload.php';
@@ -29,23 +29,24 @@ require '/var/www/html/assets/login.class.php';
                         sleep(1);
                         $x++;
                     }
-                    $x = 1; 
-                    while ($x < 4) {
+                    $x = 1;
+                    while ($x < 5) {
                         $curl->post("$ip/keypress/Down");
                         sleep(1);
                         $x++;
                     }
+                    sleep(3);
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
                     $x = 1;
-                    while ($x < 11) {
+                    while ($x < 5) {
                         $curl->post("$ip/keypress/Up");
                         sleep(1);
                         $x++;
                     }
-                    $curl->post("$ip/keypress/Select");
+                    //$curl->post("$ip/keypress/Select");
                     sleep(1);
-                    $curl->post("$ip/keypress/Down");
+                    //$curl->post("$ip/keypress/Down");*/
                     sleep(1);
                     $curl->post("$ip/keypress/Down");
                     sleep(1);
@@ -53,8 +54,7 @@ require '/var/www/html/assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
-                    $user = new USER();
-                    $user->redirect("../index.php");
+                    $user->redirect("../main.php");
                     exit();
         }
     }
@@ -90,13 +90,13 @@ require '/var/www/html/assets/login.class.php';
                     sleep(3);
                     $curl->post("$ip/keypress/Select");
                     sleep(3);*/
-                    $curl->post("$ip/keypress/Down");
+                    /*$curl->post("$ip/keypress/Down");*/
                     sleep(1);
                     $curl->post("$ip/keypress/Down");
                     sleep(1);
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
-                    $curl->post("$ip/keypress/Home");
+                    //$curl->post("$ip/keypress/Home");
                     $user->redirect("../main.php");
                     exit();
                 }
@@ -110,22 +110,23 @@ require '/var/www/html/assets/login.class.php';
                         $x++;
                     }
                     $x = 1;
-                    while ($x < 4) {
+                    while ($x < 5) {
                         $curl->post("$ip/keypress/Down");
                         sleep(1);
                         $x++;
                     }
+                    sleep(3);
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
                     $x = 1;
-                    while ($x < 11) {
+                    while ($x < 5) {
                         $curl->post("$ip/keypress/Up");
                         sleep(1);
                         $x++;
                     }
                     //$curl->post("$ip/keypress/Select");
                     sleep(1);
-                    $curl->post("$ip/keypress/Down");
+                    //$curl->post("$ip/keypress/Down");*/
                     sleep(1);
                     $curl->post("$ip/keypress/Down");
                     sleep(1);
@@ -180,4 +181,3 @@ require '/var/www/html/assets/login.class.php';
     sleep(2);
     exit();
         ?>
-   

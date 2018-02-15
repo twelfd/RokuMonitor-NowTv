@@ -26,12 +26,14 @@ and open the template in the editor.
     </head>
     <body>
         <h2>Atlantic</h2>
-        <a href="atlantic/atlantic.php?action=reset">Reset</a>
-        <a href="atlantic/atlantic.php?action=fullreset">Full Reset</a>
-        <h2>SS Football</h2>
-        <a href="ss1/ss1.php?action=reset">Reset</a>
-        <a href="main.php?logout=yes">Full Reset</a>
-        
+        <a href="atlantic/atlantic.php?action=reset">Channel Fix</a>
+        <a href="atlantic/atlantic.php?action=fullreset">OTT Fix</a>
+        <h2>SS EPL</h2>
+        <a href="ssepl/ssepl.php?action=reset">Channel Fix</a>
+        <a href="ssepl/ssepl.php?action=fullreset">OTT Fix</a>
+        <h2>SS Main Event</h2>
+        <a href="ssmainevent/ssmainevent.php?action=reset">Channel Fix</a>
+        <a href="ssmainevent/ssmainevent.php?action=fullreset">OTT Fix</a>    
         
     </body>
 </html>
