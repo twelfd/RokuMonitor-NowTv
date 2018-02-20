@@ -1,6 +1,6 @@
 <?php 
 # Set the ip of the Roku box here
-$ip = "http://192.168.2.126:8060";
+$ip = "http://192.168.4.111:8060";
 
 use Curl\Curl;
 require '/var/www/html/vendor/autoload.php';
@@ -54,6 +54,7 @@ require '/var/www/html/assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
+		    $user = new USER();
                     $user->redirect("../main.php");
                     exit();
         }
@@ -97,6 +98,7 @@ require '/var/www/html/assets/login.class.php';
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
                     //$curl->post("$ip/keypress/Home");
+		    $user = new USER();
                     $user->redirect("../main.php");
                     exit();
                 }
@@ -134,6 +136,7 @@ require '/var/www/html/assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
+		    $user = new USER();
                     $user->redirect("../main.php");
                     exit();
                 }
@@ -173,6 +176,7 @@ require '/var/www/html/assets/login.class.php';
                 sleep(5);
                 $curl->post("$ip/keypress/Select");
                 sleep(1);*/
+		$user = new USER();
                 $user->redirect("../main.php");
                 exit();
             }

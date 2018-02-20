@@ -1,6 +1,6 @@
 <?php 
 # Set the ip of the Roku box here
-$ip = "http://192.168.2.133:8060";
+$ip = "http://192.168.4.110:8060";
 
 use Curl\Curl;
 require '/var/www/html/vendor/autoload.php';

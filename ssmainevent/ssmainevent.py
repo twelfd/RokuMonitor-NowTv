@@ -4,7 +4,7 @@
 URL = "php /var/www/html/ssmainevent/ssmainevent.php"
 
 # Set the interface you wish to monitor, eg: eth0, wlan0, usb0
-INTERFACE = "enx000ec6f9bedb"
+INTERFACE = "enx000ec6f9c3cd"
 
 # Set the minimum download speed in KB/s that must be achieved.
 MINIMUM_SPEED = 150
@@ -30,7 +30,7 @@ def worker ():
         # {print $1} use just downstream
         # {print $2} use just upstream
         # {print $1+$2} use sum of downstream and upstream
-        SPEED += int(float(getoutput("ifstat -i %s 3 1 | awk '{print $1+$2}' | sed -n '3p'" % INTERFACE)))
+        SPEED += int(float(getoutput("ifstat -i %s 3 1 | awk '{print $1}' | sed -n '3p'" % INTERFACE)))
 
         if RETRIES_COUNT > RETRIES:
             # Calculate average speed from all retries

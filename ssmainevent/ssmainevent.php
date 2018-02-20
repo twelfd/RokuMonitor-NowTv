@@ -1,6 +1,6 @@
 <?php 
 # Set the ip of the Roku box here
-$ip = "http://192.168.2.126:8060";
+$ip = "http://192.168.4.112:8060";
 
 use Curl\Curl;
 require '/var/www/html/vendor/autoload.php';
@@ -35,7 +35,8 @@ require '/var/www/html/assets/login.class.php';
                         sleep(1);
                         $x++;
                     }
-                    $curl->post("$ip/keypress/Select");
+		    sleep(3);
+                    $curl->post("$ip/keypress/Right");
                     sleep(1);
                     $x = 1;
                     while ($x < 11) {
@@ -53,6 +54,7 @@ require '/var/www/html/assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
+		    $user = new USER();
                     $user->redirect("../main.php");
                     exit();
         }
@@ -91,8 +93,8 @@ require '/var/www/html/assets/login.class.php';
                     sleep(3);
                     $curl->post("$ip/keypress/Down");
                     sleep(1);
-                    $curl->post("$ip/keypress/Down");
-                    sleep(1);*/
+                    $curl->post("$ip/keypress/Down");*/
+                    sleep(1);
                     $curl->post("$ip/keypress/Select");
                     sleep(3);
                     $curl->post("$ip/keypress/Select");
@@ -114,6 +116,7 @@ require '/var/www/html/assets/login.class.php';
                         sleep(1);
                         $x++;
                     }
+		    sleep(3);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
                     $x = 1;
@@ -122,7 +125,8 @@ require '/var/www/html/assets/login.class.php';
                         sleep(1);
                         $x++;
                     }
-                    //$curl->post("$ip/keypress/Select");
+		    sleep(2);
+                    $curl->post("$ip/keypress/Select");
                     /*sleep(1);
                     $curl->post("$ip/keypress/Down");
                     sleep(1);
@@ -132,6 +136,7 @@ require '/var/www/html/assets/login.class.php';
                     sleep(5);
                     $curl->post("$ip/keypress/Select");
                     sleep(1);
+		    $user = new USER();
                     $user->redirect("../main.php");
                     exit();
                 }
@@ -171,6 +176,7 @@ require '/var/www/html/assets/login.class.php';
                 sleep(5);
                 $curl->post("$ip/keypress/Select");
                 sleep(1);*/
+		$user = new USER();
                 $user->redirect("../main.php");
                 exit();
             }

@@ -4,7 +4,7 @@
 URL = "php /var/www/html/ssepl/ssepl.php"
 
 # Set the interface you wish to monitor, eg: eth0, wlan0, usb0
-INTERFACE = "enx000ec6f9b961"
+INTERFACE = "enx000ec6f9c130"
 
 # Set the minimum download speed in KB/s that must be achieved.
 MINIMUM_SPEED = 150
