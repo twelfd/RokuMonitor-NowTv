@@ -21,7 +21,7 @@ Right
 Back
 
 Check currently running app:
-curl -XPOST 192.168.2.133:8060/query/active-app
+curl -i 192.168.2.133:8060/query/active-app
 
 Launch Now TV app:
 curl -XPOST 192.168.2.133:8060/launch/26614
