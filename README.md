@@ -1,10 +1,19 @@
 MITM Network monitor with Roku API
 
+Solution for monitoring bandwidth and re-activating stream on NowTV boxes using Roku API
+
+Dependencies:
+LAMP
+Ettercap
+Ifstat
+Python 
+USB Ethernet (one for each channel being monitored)
+
 Start MITM Attack:
 sudo ettercap -T -i enp3s0 -M ARP /192.168.2.133// -q
 
 Start Atlantic - start monitoring
-python /var/www/html/atlantic/atlantic.py
+/var/www/html/atlantic/start.sh
 
 Monitor realtime network stats:
 ifstat -S
