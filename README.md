@@ -7,7 +7,7 @@ LAMP
 Ettercap
 Ifstat
 Python 
-USB Ethernet (one for each channel being monitored)
+USB Ethernet (one for each channel being monitored or multiple ethernet onboard/add-in card)
 
 Start MITM Attack:
 sudo ettercap -T -i enp3s0 -M ARP /192.168.2.133// -q
